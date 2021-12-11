@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Top from "@/views/top/Index.vue";
-import TsBase from "@/views/top/Index.vue";
+import TsBase from "@/views/tsbase/Index.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {

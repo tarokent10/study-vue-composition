@@ -17,7 +17,8 @@ export default defineComponent({
       pages: routes,
     });
     const toTargetPage = (routeName: string) => {
-      router.push(routeName);
+      console.log("name" + routeName);
+      router.push({ name: routeName });
     };
     return { state, toTargetPage };
   },
