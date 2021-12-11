@@ -1,4 +1,5 @@
-# study
+# 概要
+Vue3とTypeScriptを学習するProject.
 
 ## Project setup
 ```
