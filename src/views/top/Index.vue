@@ -1,6 +1,6 @@
 <template>
-  <ul>
-    <li v-for="(page, idx) in state.pages" :key="idx">
+  <ul class="list-disc">
+    <li class="hover:bg-gray-400" v-for="(page, idx) in state.pages" :key="idx">
       <a @click.prevent="toTargetPage(page.routeName)">{{ page.title }}</a>
     </li>
   </ul>
