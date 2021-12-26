@@ -1,12 +1,20 @@
 <template>
-  <ul class="list-disc">
-    <li class="hover:bg-gray-400" v-for="(page, idx) in state.pages" :key="idx">
-      <a @click.prevent="toTargetPage(page.routeName)">{{ page.title }}</a>
-    </li>
-  </ul>
+  <div>
+    <h1 class="text-xl">目次</h1>
+    <hr />
+    <ul class="list-disc">
+      <li
+        class="hover:bg-gray-200 cursor-pointer"
+        v-for="(page, idx) in pages"
+        :key="idx"
+      >
+        <a @click.prevent="toTargetPage(page.routeName)">{{ page.title }}</a>
+      </li>
+    </ul>
+  </div>
 </template>
 <script lang="ts">
-import { defineComponent, reactive } from "vue";
+import { defineComponent, reactive, toRefs } from "vue";
 import { useRouter } from "vue-router";
 import { routes } from "@/views/pages";
 
@@ -17,10 +25,9 @@ export default defineComponent({
       pages: routes,
     });
     const toTargetPage = (routeName: string) => {
-      console.log("name" + routeName);
       router.push({ name: routeName });
     };
-    return { state, toTargetPage };
+    return { ...toRefs(state), toTargetPage };
   },
 });
 </script>
