@@ -4,9 +4,9 @@
     <hr />
     <ul class="list-disc">
       <li
-        class="hover:bg-gray-200 cursor-pointer"
         v-for="(page, idx) in pages"
         :key="idx"
+        class="hover:bg-gray-200 cursor-pointer"
       >
         <a @click.prevent="toTargetPage(page.routeName)">{{ page.title }}</a>
       </li>
