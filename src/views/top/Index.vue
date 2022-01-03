@@ -14,20 +14,20 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, reactive, toRefs } from "vue";
-import { useRouter } from "vue-router";
-import { routes } from "@/views/pages";
+import { defineComponent, reactive, toRefs } from 'vue';
+import { useRouter } from 'vue-router';
+import { routes } from '@/views/pages';
 
 export default defineComponent({
   setup() {
     const router = useRouter();
     const state = reactive({
-      pages: routes,
+      pages: routes
     });
     const toTargetPage = (routeName: string) => {
       router.push({ name: routeName });
     };
     return { ...toRefs(state), toTargetPage };
-  },
+  }
 });
 </script>
