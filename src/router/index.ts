@@ -2,6 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import Top from '@/views/top/Index.vue';
 import TsBase from '@/views/tsbase/Index.vue';
 import FlexStudy from '@/views/flex_study/Index.vue';
+import BlockInline from '@/views/block_inline/Index.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -13,6 +14,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/ts_base',
     name: 'TsBase',
     component: TsBase
+  },
+  {
+    path: '/block_inline',
+    name: 'BlockInline',
+    component: BlockInline
   },
   {
     path: '/flex',
