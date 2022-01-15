@@ -7,7 +7,6 @@
     </div>
     <p class="block_yellow">p</p>
     <h2 class="block_blue">h2</h2>
-    <div class="flex-container">FlexContainer</div>
     <span style="color: red">spanです</span>
     <span style="color: blue">spanです</span>
     <div id="nav">
@@ -28,9 +27,6 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-.flex-container {
-  display: flexbox;
-}
 .block {
   background: burlywood;
 }
