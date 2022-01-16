@@ -13,7 +13,7 @@ const empty = data.concat(data);
       <div
         v-for="(d, idx) in data"
         :key="idx"
-        class="w-16 h-16 bg-amber-200 border-neutral-900 cell"
+        class="w-8 h-8 bg-amber-200 border-neutral-900 cell"
       >
         {{ d }}
       </div>
@@ -40,7 +40,7 @@ const empty = data.concat(data);
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   /* align-content: flex-end; */
 }
 .flex-container-clm {
