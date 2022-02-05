@@ -6,26 +6,10 @@ import BlockInline from '@/views/block_inline/Index.vue';
 import FlexLayout from '@/views/flex_layout_study/Index.vue';
 
 const routes: Array<RouteRecordRaw> = [
-  {
-    path: '/',
-    name: 'Top',
-    component: Top
-  },
-  {
-    path: '/ts_base',
-    name: 'TsBase',
-    component: TsBase
-  },
-  {
-    path: '/block_inline',
-    name: 'BlockInline',
-    component: BlockInline
-  },
-  {
-    path: '/flex',
-    name: 'Flex',
-    component: FlexStudy
-  },
+  { path: '/', name: 'Top', component: Top },
+  { path: '/ts_base', name: 'TsBase', component: TsBase },
+  { path: '/block_inline', name: 'BlockInline', component: BlockInline },
+  { path: '/flex', name: 'Flex', component: FlexStudy },
   { path: '/flex_layout', name: 'FlexLayout', component: FlexLayout }
 ];
 
