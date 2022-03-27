@@ -1,6 +1,7 @@
 'use strict';
 
 const express = require('express');
+const { PrismaClient } = require('@prisma/client');
 const path = require('path');
 const logging = require('./http/middleware');
 
@@ -12,6 +13,12 @@ app.use(logging());
 app.use(express.static(path.join(__dirname, 'statics')));
 app.get('/', (req, res) => {
   res.send('Hello World!');
+});
+app.get('/user', async (req, res) => {
+  const prisma = new PrismaClient();
+  const user = await prisma.user.findMany();
+  console.dir(user);
+  res.send('user!');
 });
 
 app.listen(PORT, HOST);

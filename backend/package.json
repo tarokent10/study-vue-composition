@@ -7,8 +7,12 @@
     "start": "node src/app.js"
   },
   "dependencies": {
+    "@prisma/client": "^3.11.1",
     "express": "^4.16.1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prisma": "^3.11.1"
+  }
 }
